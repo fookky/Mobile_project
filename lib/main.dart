@@ -11,9 +11,9 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Flutter Demo',
       theme: ThemeData(
-        primarySwatch: Colors.blue,
+        primarySwatch: Colors.pink,
       ),
-      home: MyMainPage(title: 'Monney Pocket App'),
+      home: MyMainPage(title: 'Money Pocket App'),
     );
   }
 }
@@ -79,7 +79,7 @@ class RegisterPage extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
             Text(
-              'สมัครสมาชิก',
+              'เพิ่มชื่อบัญชีของคุณ',
               style: TextStyle(
                 fontWeight: FontWeight.bold,
                 fontSize: 24,
