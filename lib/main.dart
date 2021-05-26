@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:imagebutton/imagebutton.dart';
+// import 'package:imagebutton/imagebutton.dart';
 
 void main() {
   runApp(MyApp());
@@ -38,28 +38,28 @@ class _MyMainPageState extends State<MyMainPage> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
-            ImageButton(
-              children: <Widget>[],
-              width: 200,
-              height: 200,
-              label: Text(
-                'Money Pocket',
-                style: TextStyle(
-                  fontWeight: FontWeight.bold,
-                  fontSize: 24,
-                ),
-              ),
-              mainAxisAlignment: MainAxisAlignment.end,
-              unpressedImage: Image.asset('assets/Pigmoney.png'),
-              pressedImage: Image.asset('assets/Pigmoney.png'),
-              onTap: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(builder: (context) => RegisterPage()),
-                );
-                print('Button main pass');
-              },
-            ),
+            // ImageButton(
+            //   children: <Widget>[],
+            //   width: 200,
+            //   height: 200,
+            //   label: Text(
+            //     'Money Pocket',
+            //     style: TextStyle(
+            //       fontWeight: FontWeight.bold,
+            //       fontSize: 24,
+            //     ),
+            //   ),
+            //   mainAxisAlignment: MainAxisAlignment.end,
+            //   unpressedImage: Image.asset('assets/Pigmoney.png'),
+            //   pressedImage: Image.asset('assets/Pigmoney.png'),
+            //   onTap: () {
+            //     Navigator.push(
+            //       context,
+            //       MaterialPageRoute(builder: (context) => RegisterPage()),
+            //     );
+            //     print('Button main pass');
+            //   },
+            // ),
           ],
         ),
       ),
