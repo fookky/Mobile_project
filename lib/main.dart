@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-// import 'package:imagebutton/imagebutton.dart';
+import 'package:imagebutton/imagebutton.dart';
+import 'package:color/color.dart';
 
 void main() {
   runApp(MyApp());
@@ -13,7 +14,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.pink,
       ),
-      home: MyMainPage(title: 'Money Pocket App'),
+      home: MyMainPage(title: 'Money Money App'),
     );
   }
 }
@@ -30,40 +31,32 @@ class MyMainPage extends StatefulWidget {
 class _MyMainPageState extends State<MyMainPage> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: Text(widget.title),
-      ),
+    var scaffold = Scaffold(
+      backgroundColor: Colors.red[100],
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
-            // ImageButton(
-            //   children: <Widget>[],
-            //   width: 200,
-            //   height: 200,
-            //   label: Text(
-            //     'Money Pocket',
-            //     style: TextStyle(
-            //       fontWeight: FontWeight.bold,
-            //       fontSize: 24,
-            //     ),
-            //   ),
-            //   mainAxisAlignment: MainAxisAlignment.end,
-            //   unpressedImage: Image.asset('assets/Pigmoney.png'),
-            //   pressedImage: Image.asset('assets/Pigmoney.png'),
-            //   onTap: () {
-            //     Navigator.push(
-            //       context,
-            //       MaterialPageRoute(builder: (context) => RegisterPage()),
-            //     );
-            //     print('Button main pass');
-            //   },
-            // ),
+            ImageButton(
+              children: <Widget>[],
+              width: 200,
+              height: 200,
+              mainAxisAlignment: MainAxisAlignment.end,
+              unpressedImage: Image.asset('assets/image/moneymoney.png'),
+              pressedImage: Image.asset('assets/image/moneymoney.png'),
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => RegisterPage()),
+                );
+                print('Button main pass');
+              },
+            ),
           ],
         ),
       ),
     );
+    return scaffold;
   }
 }
 
@@ -71,10 +64,12 @@ class RegisterPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text("Register"),
-      ),
-      body: Center(
+      backgroundColor: Colors.red[100],
+      // appBar: AppBar(
+      //   backgroundColor: Colors.red[200],
+      //   title: Text("สมัครสมาชิก"),
+      // ),
+      body: Container(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
@@ -82,6 +77,7 @@ class RegisterPage extends StatelessWidget {
               'เพิ่มชื่อบัญชีของคุณ',
               style: TextStyle(
                 fontWeight: FontWeight.bold,
+                fontFamily: 'Mali',
                 fontSize: 24,
               ),
             ),
