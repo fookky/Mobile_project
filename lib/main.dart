@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:imagebutton/imagebutton.dart';
 import 'package:color/color.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 void main() {
   runApp(MyApp());
@@ -11,8 +12,13 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Flutter Demo',
+      // theme: ThemeData(
+      //   primarySwatch: Colors.pink,
+      // ),
       theme: ThemeData(
-        primarySwatch: Colors.pink,
+        textTheme: GoogleFonts.maliTextTheme(
+          Theme.of(context).textTheme,
+        ),
       ),
       home: MyMainPage(title: 'Money Money App'),
     );
@@ -39,11 +45,11 @@ class _MyMainPageState extends State<MyMainPage> {
           children: <Widget>[
             ImageButton(
               children: <Widget>[],
-              width: 200,
-              height: 200,
+              width: 300,
+              height: 300,
               mainAxisAlignment: MainAxisAlignment.end,
-              unpressedImage: Image.asset('assets/image/moneymoney.png'),
-              pressedImage: Image.asset('assets/image/moneymoney.png'),
+              unpressedImage: Image.asset('assets/moneymoney.png'),
+              pressedImage: Image.asset('assets/moneymoney.png'),
               onTap: () {
                 Navigator.push(
                   context,
@@ -69,29 +75,51 @@ class RegisterPage extends StatelessWidget {
       //   backgroundColor: Colors.red[200],
       //   title: Text("สมัครสมาชิก"),
       // ),
-      body: Container(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[
-            Text(
-              'เพิ่มชื่อบัญชีของคุณ',
-              style: TextStyle(
-                fontWeight: FontWeight.bold,
-                fontFamily: 'Mali',
-                fontSize: 24,
-              ),
-            ),
-            SizedBox(height: 20),
-            Padding(
-              padding: EdgeInsets.symmetric(horizontal: 4, vertical: 12),
-              child: TextField(
-                decoration: InputDecoration(
-                  border: OutlineInputBorder(),
-                  hintText: 'ชื่อของคุณ',
+      body: Center(
+        child: Padding(
+          padding: const EdgeInsets.all(40),
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: <Widget>[
+              Text(
+                'เพิ่มชื่อบัญชีของคุณ',
+                style: TextStyle(
+                  fontSize: 20,
+                  fontWeight: FontWeight.w600,
                 ),
               ),
-            ),
-          ],
+              SizedBox(height: 20),
+              Padding(
+                padding: EdgeInsets.symmetric(horizontal: 4, vertical: 12),
+                child: TextField(
+                  decoration: InputDecoration(
+                    border: OutlineInputBorder(),
+                    hintText: 'ชื่อของคุณ',
+                  ),
+                  style: TextStyle(
+                    fontSize: 16,
+                    fontWeight: FontWeight.w300,
+                  ),
+                ),
+              ),
+              ElevatedButton(
+                child: Text(
+                  'สมัครสมาชิก',
+                  style: TextStyle(
+                    color: Color.black,
+                    fontSize: 16,
+                    fontWeight: FontWeight.w200,
+                  ),
+                ),
+                style: ElevatedButton.styleFrom(
+                  primary: Colors.blue[200],
+                ),
+                onPressed: () {
+                  print('Pressed');
+                },
+              )
+            ],
+          ),
         ),
       ),
     );
