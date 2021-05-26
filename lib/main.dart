@@ -106,23 +106,29 @@ class RegisterPage extends StatelessWidget {
               ),
               Padding(
                 padding: const EdgeInsets.all(20),
-                child: ElevatedButton(
-                  child: Text(
-                    'สมัครสมาชิก',
-                    style: TextStyle(
-                      fontSize: 16,
+                child: SizedBox(
+                  width: 150,
+                  height: 50,
+                  child: ElevatedButton(
+                    child: Text(
+                      'สมัครสมาชิก',
+                      style: TextStyle(
+                        fontSize: 16,
+                      ),
                     ),
+                    style: ElevatedButton.styleFrom(
+                      primary: Colors.blue[200],
+                      onPrimary: Colors.black,
+                      shadowColor: Colors.white,
+                      shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.all(Radius.circular(30))),
+                    ),
+                    onPressed: () {
+                      print('Pressed');
+                    },
                   ),
-                  style: ElevatedButton.styleFrom(
-                    primary: Colors.blue[200],
-                    onPrimary: Colors.black,
-                    shadowColor: Colors.white,
-                  ),
-                  onPressed: () {
-                    print('Pressed');
-                  },
                 ),
-              )
+              ),
             ],
           ),
         ),
