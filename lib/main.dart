@@ -77,14 +77,14 @@ class RegisterPage extends StatelessWidget {
       // ),
       body: Center(
         child: Padding(
-          padding: const EdgeInsets.all(40),
+          padding: const EdgeInsets.all(60),
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
               Text(
                 'เพิ่มชื่อบัญชีของคุณ',
                 style: TextStyle(
-                  fontSize: 20,
+                  fontSize: 18,
                   fontWeight: FontWeight.w600,
                 ),
               ),
@@ -93,6 +93,8 @@ class RegisterPage extends StatelessWidget {
                 padding: EdgeInsets.symmetric(horizontal: 4, vertical: 12),
                 child: TextField(
                   decoration: InputDecoration(
+                    filled: true,
+                    fillColor: Colors.white,
                     border: OutlineInputBorder(),
                     hintText: 'ชื่อของคุณ',
                   ),
@@ -102,21 +104,24 @@ class RegisterPage extends StatelessWidget {
                   ),
                 ),
               ),
-              ElevatedButton(
-                child: Text(
-                  'สมัครสมาชิก',
-                  style: TextStyle(
-                    color: Color.black,
-                    fontSize: 16,
-                    fontWeight: FontWeight.w200,
+              Padding(
+                padding: const EdgeInsets.all(20),
+                child: ElevatedButton(
+                  child: Text(
+                    'สมัครสมาชิก',
+                    style: TextStyle(
+                      fontSize: 16,
+                    ),
                   ),
+                  style: ElevatedButton.styleFrom(
+                    primary: Colors.blue[200],
+                    onPrimary: Colors.black,
+                    shadowColor: Colors.white,
+                  ),
+                  onPressed: () {
+                    print('Pressed');
+                  },
                 ),
-                style: ElevatedButton.styleFrom(
-                  primary: Colors.blue[200],
-                ),
-                onPressed: () {
-                  print('Pressed');
-                },
               )
             ],
           ),
